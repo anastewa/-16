@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"> 1</div>
+    <div class="box"> 2</div>
+    <div class="box">3 </div>
+    <div id="large">4 </div>
+    <script> 
+    //для всех элементов
+ document.body.style.display = "flex";
+document.body.style.flexWrap = "wrap";
+document.body.style.gap = "10px";
+document.body.style.justifyContent = "center";
+document.body.style.textAlign = "center";
+//для нижнего
+    const largeBox= document.getElementById("large")
+    largeBox.style.height = "100px";
+    largeBox.style.width = "60%"
+    largeBox.style['background-color'] = "#888";
+    largeBox.style['border-color'] = "rgb(54,52,52)";
+    largeBox.style['font-size'] =  "30px";
+    largeBox.style.borderStyle = "solid";
+
+//для верхних трех
+    const boxes = document.getElementsByClassName("box")
+    for (let i = 0; i < boxes.length; i++){
+         boxes[i].style.width = "200px"; 
+         boxes[i].style.height = "100px";
+         boxes[i].style['background-color'] = "#888";
+       //  boxes[i].style['border-width'] = "10px";
+         boxes[i].style['border-color'] = "rgb(54,52,52)";
+         boxes[i].style.borderStyle = "solid";
+         boxes[i].style['font-size'] =  "30px";
+         boxes[i].style.display = "flex"
+    }
+   
+    
+
+    </script>
+</body>
+</html>
